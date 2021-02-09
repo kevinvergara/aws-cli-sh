@@ -1,8 +1,8 @@
-FROM node:12-alpine
+FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN apk update && apk upgrade && apk add unzip vim curl
+RUN apt update && apt upgrade -y && apt install unzip vim curl -y
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
