@@ -2,7 +2,7 @@ FROM node:12-alpine
 
 WORKDIR /app
 
-RUN apk update && apk upgrade && apk add unzip vim
+RUN apk update && apk upgrade && apk add unzip vim curl
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
